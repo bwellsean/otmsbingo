@@ -13,7 +13,6 @@ const phrases = [
     "without a bathroom break",
     "Can see moms thong/ or Dads underwear",
     "You incorporate a famous movie line into conference (I.e., You can't handle the truth!)",
-    "FREE SPACE",
     "Referee a fight between to divocred parents",
     "Parent in denial",
     "A live animal makes an apperance",
@@ -37,6 +36,8 @@ document.getElementById('start-btn').addEventListener('click', () => {
     if (playerName) {
         document.getElementById('name-input').style.display = 'none';
         document.getElementById('game-container').style.display = 'block';
+        document.getElementById('bingo-board').style.pointerEvents = 'auto'; //enable clicks on board
+        document.getElementById('reset-btn').disabled = false; //Enable reset button
         generateBingoBoard();
     } else {
         alert('Please enter your name to start the game!');
@@ -129,7 +130,7 @@ function checkForBingo() {
 }
 // Function to send user data to Google Sheets using fetch
 function sendDataToGoogleSheet(name, count) {
-    const url = 'https://script.google.com/macros/s/AKfycbxHAXTONS9PDyjI9pFaPnkFN_c7ZNwhd26Je0aXugVm2O9qHHYB7zXb_VFeqQQtM8oyVg/exechttps://script.google.com/macros/s/AKfycbzZbxQ8pNOr9wLlibHGnVtiCwK_q1QHvtpUfSEpHx4hEJzYeX8kBTAdyc8zPUeMlCf1zw/exec';
+    const url = 'https://script.google.com/macros/s/AKfycbzZbxQ8pNOr9wLlibHGnVtiCwK_q1QHvtpUfSEpHx4hEJzYeX8kBTAdyc8zPUeMlCf1zw/exec';
 
     fetch('https://script.google.com/macros/s/AKfycbzZbxQ8pNOr9wLlibHGnVtiCwK_q1QHvtpUfSEpHx4hEJzYeX8kBTAdyc8zPUeMlCf1zw/exec', {
         method: 'POST',
