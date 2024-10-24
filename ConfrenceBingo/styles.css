@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: gray;
+}
+
+img{
+    width: 200px;
+    height: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#bingo-board {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.bingo-cell {
+    background-color: #f0f0f0;
+    border: 2px solid #333;
+    padding: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.bingo-cell.clicked {
+    background-color: #d9202a;
+    color: white;
+}
+
+#reset-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.secret-text{
+    font-style: italic;
+    color: lightgray;
+}
+#bingo-message{
+    color: #d9202a;
+    text-shadow: 1px 1px 2px red, 0 0 1em black, 0 0 0.2em gray;
+}
