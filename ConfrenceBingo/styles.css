@@ -4,6 +4,10 @@ body {
     background-color: gray;
 }
 
+label, #start-btn, input{
+    font-size: 16pt;
+}
+
 img{
     width: 200px;
     height: auto;
